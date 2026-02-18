@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Game | Sudoku Game</title>
+    <link rel="stylesheet" href="../common/styles.css">
+    <style>
+        .game-list {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .game-item {
+            background: white;
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.2s;
+        }
+
+        .game-item:hover {
+            transform: scale(1.02);
+            border-color: #3498db;
+        }
+
+        .game-info h3 {
+            margin: 0;
+            color: #2c3e50;
+        }
+
+        .game-info p {
+            margin: 5px 0 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .play-link {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+            border: 1px solid #3498db;
+            padding: 8px 15px;
+            border-radius: 4px;
+        }
+
+        .play-link:hover {
+            background: #3498db;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Sudoku Game</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/selection/" class="active">Play</a></li>
+                <li><a href="/high-scores/">Scores</a></li>
+                <li><a href="/rules/">Rules</a></li>
+                <li><a href="/login/">Login</a></li>
+                <li><a href="/register/">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Select Your Challenge</h1>
+        <p>Choose a puzzle created by our community members.</p>
+
+        <ul class="game-list">
+            <li class="game-item">
+                <div class="game-info">
+                    <h3>The Classic Gauntlet</h3>
+                    <p>Author: Alex Thompson</p>
+                </div>
+                <a href="/game-hard/" class="play-link">Play Hard</a>
+            </li>
+
+            <li class="game-item">
+                <div class="game-info">
+                    <h3>Morning Breeze</h3>
+                    <p>Author: Sarah Jenkins</p>
+                </div>
+                <a href="/game-easy/" class="play-link">Play Easy</a>
+            </li>
+
+            <li class="game-item">
+                <div class="game-info">
+                    <h3>Logic Master's Trial</h3>
+                    <p>Author: Michael Chen</p>
+                </div>
+                <a href="/game-hard/" class="play-link">Play Hard</a>
+            </li>
+
+            <li class="game-item">
+                <div class="game-info">
+                    <h3>Quick Six</h3>
+                    <p>Author: Emily Rodriguez</p>
+                </div>
+                <a href="/game-easy/" class="play-link">Play Easy</a>
+            </li>
+        </ul>
+    </main>
+
+</body>
+</html>

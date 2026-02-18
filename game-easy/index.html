@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Game | Sudoku Game</title>
+    <link rel="stylesheet" href="../common/styles.css">
+    <style>
+        .grid-6x6 {
+            display: grid;
+            grid-template-columns: repeat(6, 50px);
+            grid-template-rows: repeat(6, 50px);
+            justify-content: center;
+            border: 2px solid #000;
+            margin: 20px auto;
+            width: fit-content;
+        }
+
+        .cell {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border: 0.5px solid #ccc;
+            font-size: 1.3rem;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        .cell:nth-child(3n) { border-right: 2px solid #000; }
+        .cell:nth-child(6n) { border-right: 0.5px solid #ccc; }
+
+        .cell:nth-child(n+13):nth-child(-n+18),
+        .cell:nth-child(n+25):nth-child(-n+30) {
+            border-bottom: 2px solid #000;
+        }
+
+        .fixed {
+            background-color: #eee;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Sudoku Game</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/selection/">Play</a></li>
+                <li><a href="/high-scores/">Scores</a></li>
+                <li><a href="/rules/">Rules</a></li>
+                <li><a href="/login/">Login</a></li>
+                <li><a href="/register/">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Easy Mode</h1>
+        
+        <div style="margin-bottom: 15px; font-weight: bold;">
+            Time Elapsed: <span>02:15</span>
+        </div>
+
+        <div class="grid-6x6">
+            <input type="number" class="cell fixed" value="1" readonly>
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell fixed" value="4" readonly>
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell" min="1" max="6">
+
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell fixed" value="3" readonly>
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell fixed" value="2" readonly>
+
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell fixed" value="5" readonly>
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell fixed" value="1" readonly>
+            <input type="number" class="cell" min="1" max="6">
+
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell fixed" value="6" readonly>
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell" min="1" max="6">
+
+            <input type="number" class="cell fixed" value="2" readonly>
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell fixed" value="5" readonly>
+
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell fixed" value="6" readonly>
+            <input type="number" class="cell" min="1" max="6">
+            <input type="number" class="cell fixed" value="4" readonly>
+            <input type="number" class="cell" min="1" max="6">
+        </div>
+
+        <button class="btn">Submit Game</button>
+    </main>
+
+</body>
+</html>

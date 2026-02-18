@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hard Game | Sudoku Game</title>
+    <link rel="stylesheet" href="../common/styles.css">
+    <style>
+        .grid-9x9 {
+            display: grid;
+            grid-template-columns: repeat(9, 40px);
+            grid-template-rows: repeat(9, 40px);
+            justify-content: center;
+            border: 2px solid #000;
+            margin: 20px auto;
+            width: fit-content;
+        }
+
+        .cell {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border: 0.5px solid #ccc;
+            font-size: 1.2rem;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        .cell:nth-child(3n) { border-right: 2px solid #000; }
+        .cell:nth-child(9n) { border-right: 0.5px solid #ccc; }
+        
+        .cell:nth-child(n+19):nth-child(-n+27),
+        .cell:nth-child(n+46):nth-child(-n+54) {
+            border-bottom: 2px solid #000;
+        }
+
+        .fixed {
+            background-color: #eee;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Sudoku Game</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/selection/">Play</a></li>
+                <li><a href="/high-scores/">Scores</a></li>
+                <li><a href="/rules/">Rules</a></li>
+                <li><a href="/login/">Login</a></li>
+                <li><a href="/register/">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Hard Mode</h1>
+        
+        <div style="margin-bottom: 15px; font-weight: bold;">
+            Time Elapsed: <span>08:42</span>
+        </div>
+
+        <div class="grid-9x9">
+            <input type="number" class="cell fixed" value="5" readonly>
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell fixed" value="6" readonly>
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell fixed" value="9" readonly>
+            <input type="number" class="cell fixed" value="8" readonly>
+
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell fixed" value="7" readonly>
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+            <input type="number" class="cell" min="1" max="9">
+        </div>
+
+        <button class="btn">Submit Game</button>
+    </main>
+
+</body>
+</html>
